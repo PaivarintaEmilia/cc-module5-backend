@@ -44,7 +44,8 @@ disp.plot()
 prediction = text_clf.predict(['I love dogs.'])
 print(f"Prediction: {prediction[0]}")
 
-quit()
+
+
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=8080)
