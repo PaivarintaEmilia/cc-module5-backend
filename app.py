@@ -40,8 +40,8 @@ disp.plot()
 #plt.show()
 
 # Making predictions and printing result
-userInput = input("Insert your sentence here:\n")
-prediction = text_clf.predict([userInput])
+#userInput = input("Insert your sentence here:\n")
+prediction = text_clf.predict(['I love dogs.'])
 print(f"Prediction: {prediction[0]}")
 
 quit()
