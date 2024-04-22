@@ -15,8 +15,7 @@ def hello_world():
     return "<p>Hello, World Changes!</p>"
 
 df = pd.read_csv("train.csv", encoding="ISO-8859-1", engine="python", on_bad_lines="skip")
-df.info()
-print(df.head())
+#df.info()
 df.isnull().sum()
 df.dropna(inplace=True)
 df.isnull().sum()
@@ -33,12 +32,12 @@ text_clf = Pipeline([
 text_clf.fit(X_train, y_train)
 
 predictions = text_clf.predict(X_test)
-print(classification_report(y_test, predictions))
+#print(classification_report(y_test, predictions))
 
 cm = confusion_matrix(y_test, predictions)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=text_clf.classes_)
 disp.plot()
-plt.show()
+#plt.show()
 
 # Making predictions and printing result
 userInput = input("Insert your sentence here:\n")
